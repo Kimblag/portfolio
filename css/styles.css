@@ -7,6 +7,10 @@ html {
     padding-bottom: 3rem;
 }
 
+#portfolio {
+  scroll-margin-top: 90px;
+}
+
 .section-title {
     font-size: 1.875rem;
     font-weight: 500;
@@ -16,7 +20,7 @@ html {
 .section-title-about::before {
     content: "ACERCA DE MÍ";
     position: absolute;
-    top: -2rem;
+    top: -3rem;
     opacity: 0.2;
     display: none;
     font-size: 5rem;
@@ -35,10 +39,14 @@ html {
     z-index: -1;
 }
 
+.section-title-portfolio {
+  padding-top: 3rem;
+}
+
 .section-title-portfolio::before {
     content: "PORTFOLIO";
     position: absolute;
-    top: -2rem;
+    top: 1rem;
     left: 50%;              
     transform: translateX(-50%);
     opacity: 0.2;

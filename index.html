@@ -29,7 +29,7 @@
   >
     <!-- header -->
     <header
-      class="bg-white dark:bg-gray-900 fixed top-0 z-10 w-full transition-all duration-300 shadow-md"
+      class="bg-white dark:bg-gray-800 fixed top-0 z-10 w-full transition-all duration-300 shadow-md"
     >
       <!-- Navbar -->
       <nav
@@ -206,7 +206,7 @@
         <div class="flex items-center h-full pt-8">
           <!-- left side  -->
           <article class="flex-1 flex flex-col items-center lg:items-start">
-            <p class="text-lg text-[#912f40] dark:text-gray-400 mb-[22px]">
+            <p class="text-2xl text-[#912f40] dark:text-gray-400 mb-[22px]">
               ¡Hola, soy Kimberly! 🙋🏻‍♀️
             </p>
             <h1
@@ -261,29 +261,29 @@
           >
             <div class="flex flex-col">
               <header>
-                <h2 class="text-4xl section-title-about relative mb-3">
+                <h2 class="text-5xl section-title-about relative mb-3">
                   Kimberly Blandon
                 </h2>
-                <p class="mb-4 text-2xl text-[#912f40]">
+                <p class="mb-4 text-3xl text-[#912f40]">
                   <em>Programadora</em>
                 </p>
                 <hr class="mb-4 opacity-5" />
               </header>
 
-              <p class="mb-8">
+              <p class="text-lg mb-8">
                 Soy desarrolladora Full Stack, con pasión por crear soluciones
                 web y aplicaciones que sean útiles, escalables y fáciles de
                 mantener.
               </p>
 
-              <p class="mb-8">
+              <p class="text-lg mb-8">
                 Me gusta investigar, resolver problemas y aprender
                 constantemente. Disfruto trabajar en equipo, escuchar ideas y
                 aportar mis conocimientos para alcanzar objetivos de manera
                 colaborativa.
               </p>
 
-              <p class="mb-8">
+              <p class="text-lg mb-8">
                 Actualmente estoy ampliando mis conocimientos en .NET y, gracias
                 a la universidad, he trabajado con C++ y otros proyectos
                 académicos. Busco seguir creciendo y aplicar lo aprendido en
@@ -305,7 +305,7 @@
           <h2 class="text-4xl relative mb-3 section-title-skills">
             Mis habilidades
           </h2>
-          <p class="subtitle max-w-xl mx-auto">
+          <p class="dark:text-gray-400 max-w-xl mx-auto">
             Estas son algunas de las tecnologías y herramientas que manejo
             actualmente.
           </p>
@@ -495,14 +495,14 @@
     <!-- proyectos -->
     <section
       id="portfolio"
-      class="section lg:h-[100vh] flex items-center lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden"
+    class="section relative lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden"
     >
       <div class="container mx-auto">
         <header class="text-center mb-12">
           <h2 class="text-4xl section-title-portfolio relative mb-3">
             Portfolio
           </h2>
-          <p class="subtitle max-w-xl mx-auto">
+          <p class="dark:text-gray-400 max-w-3xl mx-auto">
             Me gusta aprender nuevas cosas y siempre estoy buscando crear nuevos
             proyectos para trabajar. Así que aquí te muestro mis ultimos
             proyectos.
@@ -510,27 +510,58 @@
         </header>
 
         <!-- proyectos -->
-        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 max-w-7xl mx-auto">
+          
           <article
             class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col"
           >
             <img
-              src="assets/proyecto1.png"
-              alt="Captura del sistema inmobiliario en C++"
-              class="w-full h-40 object-cover"
+              src="assets/proyectos/abmlInmobiliariaPython.webp"
+              alt="Captura del sistema inmobiliario en Python"
+              class="w-full object-contains h-72"
             />
             <div class="p-6 flex flex-col flex-1">
               <h3
                 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white"
               >
-                ABML Inmobiliaria
+                ABML Inmobiliaria - Python
               </h3>
               <p class="text-gray-600 dark:text-gray-300 mb-4 flex-1">
-                Sistema de consola en C++ para gestión de propiedades: altas,
+                Sistema de consola en Python para gestión de propiedades: altas,
                 bajas, modificaciones y listados.
               </p>
               <a
-                href="https://github.com/tuusuario/abml_inmobiliaria"
+                href="https://github.com/Kimblag/abml_inmobiliaria_py"
+                target="_blank"
+                class="btn btn-md bg-red-700 hover:bg-red-900 text-white text-center rounded"
+              >
+                Ver en GitHub
+              </a>
+            </div>
+          </article>
+
+
+          <article
+            class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col"
+          >
+            <img
+              src="assets/proyectos/sistemaColegioCpp.webp"
+              alt="Captura del sistema de gestión escolar en C++"
+              class="w-full object-contains h-72"
+            />
+            <div class="p-6 flex flex-col flex-1">
+              <h3
+                class="text-xl font-semibold mb-2 text-gray-900 dark:text-white"
+              >
+                Sistema de Gestión Escolar - C++
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4 flex-1">
+                Sistema de consola en C++ para la gestión de un colegio: altas,
+                bajas, modificaciones y listados para las entidades alumnos, docentes, cursos, 
+                inscripciones y generación de reportes.
+              </p>
+              <a
+                href="https://github.com/Kimblag/Sistema_Gestion_Escolar_UTN"
                 target="_blank"
                 class="btn btn-md bg-red-700 hover:bg-red-900 text-white text-center rounded"
               >
@@ -543,9 +574,9 @@
             class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col"
           >
             <img
-              src="https://via.placeholder.com/600x400?text=Mini+RAG+Python"
+              src="assets/proyectos/RAGProyecto.webp"
               alt="Placeholder del proyecto RAG en Python"
-              class="w-full h-40 object-cover"
+              class="w-full object-contains h-72"
             />
             <div class="p-6 flex flex-col flex-1">
               <h3
@@ -558,7 +589,36 @@
                 LangChain.
               </p>
               <a
-                href="https://github.com/tuusuario/langchain-rag"
+                href="https://github.com/Kimblag/langchain-roadmap-projects/blob/main/week3_langchain_intro/langchain_rag.py"
+                target="_blank"
+                class="btn btn-md bg-red-700 hover:bg-red-900 text-white text-center rounded"
+              >
+                Ver en GitHub
+              </a>
+            </div>
+          </article>
+          
+          <article
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col"
+          >
+            <img
+              src="assets/proyectos/CsharpWinformProyecto.webp"
+              alt="Placeholder del proyecto Winform en CSharp"
+              class="w-full object-contains h-72"
+            />
+            <div class="p-6 flex flex-col flex-1">
+              <h3
+                class="text-xl font-semibold mb-2 text-gray-900 dark:text-white"
+              >
+                Gestión de Artículos - C# WinForms
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4 flex-1">
+                Aplicación de escritorio para administrar artículos de un comercio, con funcionalidades de búsqueda, alta, baja, 
+                modificación, visualización de detalles e imágenes múltiples. Incluye gestión de marcas y categorías. 
+                Desarrollo en C# con WinForms y SQL Server.
+              </p>
+              <a
+                href="https://github.com/Kimblag/langchain-roadmap-projects/blob/main/week3_langchain_intro/langchain_rag.py"
                 target="_blank"
                 class="btn btn-md bg-red-700 hover:bg-red-900 text-white text-center rounded"
               >
@@ -580,7 +640,7 @@
           <h2 class="text-4xl section-title-contacto relative mb-3">
             Contacto
           </h2>
-          <p class="subtitle max-w-xl mx-auto">
+          <p class="dark:text-gray-400 max-w-3xl mx-auto">
             Si querés hablar sobre proyectos, colaborar o simplemente saludar,
             podés escribirme a través del formulario o por mis redes.
           </p>
