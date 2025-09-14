@@ -1,0 +1,138 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 1.875rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
+
+.section-title-about::before {
+    content: "ACERCA DE MÍ";
+    position: absolute;
+    top: -2rem;
+    opacity: 0.2;
+    display: none;
+    font-size: 5rem;
+    z-index: -1;
+}
+
+.section-title-skills::before {
+    content: "MIS HABILIDADES";
+    position: absolute;
+    top: -2rem;
+    left: 50%;              
+    transform: translateX(-50%);
+    opacity: 0.2;
+    display: none;
+    font-size: 5rem;
+    z-index: -1;
+}
+
+.section-title-portfolio::before {
+    content: "PORTFOLIO";
+    position: absolute;
+    top: -2rem;
+    left: 50%;              
+    transform: translateX(-50%);
+    opacity: 0.2;
+    display: none;
+    font-size: 5rem;
+    z-index: -1;
+}
+
+.section-title-contacto::before {
+    content: "CONTACTO";
+    position: absolute;
+    top: -2rem;
+    left: 50%;              
+    transform: translateX(-50%);
+    opacity: 0.2;
+    display: none;
+    font-size: 5rem;
+    z-index: -1;
+}
+
+
+.subtitle {
+    font-size: 1rem;
+    color: #5b5f64;
+    margin-bottom: 4rem;
+    max-width: 520px;
+}
+
+
+.container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.btn {
+    padding: 1rem 1.75rem;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.125rem;
+    background-color: #f87171;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #7f1d1d;
+}
+
+.btn-lg {
+    height: 54px;
+}
+
+.btn-md {
+    height: 48px;
+}
+
+@media (min-width: 1024px) {
+
+    .section {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
+    .container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .subtitle {
+        margin-bottom: 6rem;
+    }
+
+    .section-title {
+        font-size: 2.25rem;
+        font-weight: 800;
+    }
+
+    .section-title-about::before {
+        display: block;
+    }
+    .section-title-skills::before {
+        display: block;
+    }
+    .section-title-portfolio::before {
+        display: block;
+    }
+    .section-title-contacto::before {
+        display: block;
+    }
+}

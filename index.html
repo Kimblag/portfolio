@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Kimberly Blandon</title>
+    <link rel="icon" href="assets/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body
+    class="bg-gray-100 text-gray-900 font-sans dark:bg-gray-900 dark:text-gray-100 transition-colors"
+  >
+    <!-- header -->
+    <header
+      class="bg-white dark:bg-gray-900 fixed top-0 z-10 w-full transition-all duration-300 shadow-md"
+    >
+      <!-- Navbar -->
+      <nav
+        aria-label="navegación"
+        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <!-- logo -->
+          <a href="#home">
+            <h1
+              class="text-3xl font-bold text-black dark:text-white cursor-pointer"
+            >
+              Kimberly Blandon
+            </h1>
+          </a>
+        </div>
+
+        <!-- boton menú desplegable -->
+        <div class="flex lg:hidden">
+          <button type="button" id="toggle-mobile-menu">
+            <span class="sr-only">Abrir menú principal</span>
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- menu -->
+        <ul class="hidden lg:flex lg:space-x-8 flex text-lg">
+          <li
+            class="text-gray-900 dark:text-white hover:text-red-600 cursor-pointer"
+          >
+            <a href="#home"> Home </a>
+          </li>
+          <li
+            class="text-gray-900 dark:text-white hover:text-red-600 cursor-pointer"
+          >
+            <a href="#about"> Acerca de </a>
+          </li>
+          <li
+            class="text-gray-900 dark:text-white hover:text-red-600 cursor-pointer"
+          >
+            <a href="#skills"> Habilidades </a>
+          </li>
+          <li
+            class="text-gray-900 dark:text-white hover:text-red-600 cursor-pointer"
+          >
+            <a href="#portfolio"> Portfolio </a>
+          </li>
+          <li
+            class="text-gray-900 dark:text-white hover:text-red-600 cursor-pointer"
+          >
+            <a href="#contact"> Contacto </a>
+          </li>
+        </ul>
+
+        <!-- toggle light dark -->
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <button
+            id="toggle-dark"
+            class="px-2 py-1 rounded border dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            title="Cambiar tema"
+          >
+            <i
+              id="icon-toggle"
+              class="fas fa-moon text-gray-800 dark:text-gray-100"
+            ></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- menu mobile -->
+    <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+      <div tabindex="0" class="fixed inset-0 focus:outline-none">
+        <div
+          class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-gray-900 dark:sm:ring-gray-100/10"
+        >
+          <div class="flex items-center justify-between">
+            <a href="#home">
+              <h1
+                class="text-3xl font-bold text-black dark:text-white cursor-pointer"
+              >
+                Kimberly Blandon
+              </h1>
+            </a>
+            <button
+            id="btn-close-mobile"
+              type="button"
+              class="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-400"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6"
+              >
+                <path
+                  d="M6 18 18 6M6 6l12 12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10 dark:divide-white/10">
+              <div class="space-y-2 py-6">
+                <div class="-mx-3">
+                  <ul class="capitalize">
+                    <li
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
+                    >
+                      Home
+                    </li>
+                    <li
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
+                    >
+                      About
+                    </li>
+                    <li
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
+                    >
+                      Portfolio
+                    </li>
+                    <li
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
+                    >
+                      Contacto
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="py-6">
+                <button
+                  id="toggle-dark-mobile"
+                  class="px-2 py-1 rounded px-2 py-1 rounded border dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                  title="Cambiar tema"
+                >
+                  <i
+                    id="icon-toggle-mobile"
+                    class="fas fa-moon text-gray-800 dark:text-gray-100"
+                  ></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Hero -->
+    <section
+      id="home"
+      class="lg:h-[100vh] flex items-center lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden"
+    >
+      <div class="container mx-auto h-full">
+        <div class="flex items-center h-full pt-8">
+          <!-- left side  -->
+          <article class="flex-1 flex flex-col items-center lg:items-start">
+            <p class="text-lg text-[#912f40] dark:text-gray-400 mb-[22px]">
+              ¡Hola, soy Kimberly! 🙋🏻‍♀️
+            </p>
+            <h1
+              class="text-4xl leading-[44px] md:text-5xl md:leading-tight lg:text-7xl lg:leading-[1.2] font-bold md:tracking-[-2px]"
+            >
+              Programadora
+            </h1>
+            <p
+              class="pt-4 pb-8 md:pt-6 md:pb-12 max-w-[480px] text-lg text-center lg:text-left"
+            >
+              Disfruto aprender algo nuevo todos los días, explorando ideas y
+              desarrollando proyectos.<br />
+              <strong
+                ><em
+                  >Mi pasión es aprender y construir soluciones reales.</em
+                ></strong
+              >
+            </p>
+            <a href="#contact" class="transition-all duration-300">
+              <button
+                class="btn btn-md bg-red-500 hover:bg-red-600 md:btn-lg transition-all text-white"
+              >
+                Contáctame
+              </button>
+            </a>
+          </article>
+
+          <!-- right side  -->
+          <figure class="hidden lg:flex flex-1 justify-end items-end h-full">
+            <img src="assets/imagenEncabezado.webp" alt="Imagen banner" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- acerca de -->
+    <section
+      id="about"
+      class="section lg:h-[100vh] flex items-center lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden"
+    >
+      <div class="container mx-auto">
+        <div class="flex flex-col xl:flex-row gap-24">
+          <img
+            src="assets/imagenAcercaDe.webp"
+            alt="Imagen de Kimberly Blandon"
+            class="object-cover h-full w-[250px] mx-auto md:mx-auto lg:mx-0 rounded-2xl"
+          />
+
+          <!-- contenido -->
+          <article
+            class="flex flex-col items-center text-center lg:items-start lg:text-left"
+          >
+            <div class="flex flex-col">
+              <header>
+                <h2 class="text-4xl section-title-about relative mb-3">
+                  Kimberly Blandon
+                </h2>
+                <p class="mb-4 text-2xl text-[#912f40]">
+                  <em>Programadora</em>
+                </p>
+                <hr class="mb-4 opacity-5" />
+              </header>
+
+              <p class="mb-8">
+                Soy desarrolladora Full Stack, con pasión por crear soluciones
+                web y aplicaciones que sean útiles, escalables y fáciles de
+                mantener.
+              </p>
+
+              <p class="mb-8">
+                Me gusta investigar, resolver problemas y aprender
+                constantemente. Disfruto trabajar en equipo, escuchar ideas y
+                aportar mis conocimientos para alcanzar objetivos de manera
+                colaborativa.
+              </p>
+
+              <p class="mb-8">
+                Actualmente estoy ampliando mis conocimientos en .NET y, gracias
+                a la universidad, he trabajado con C++ y otros proyectos
+                académicos. Busco seguir creciendo y aplicar lo aprendido en
+                proyectos reales.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills -->
+    <section
+      id="skills"
+      class="section lg:h-[100vh] flex items-center lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden"
+    >
+      <div class="container">
+        <header class="text-center mb-12">
+          <h2 class="text-4xl relative mb-3 section-title-skills">
+            Mis habilidades
+          </h2>
+          <p class="subtitle max-w-xl mx-auto">
+            Estas son algunas de las tecnologías y herramientas que manejo
+            actualmente.
+          </p>
+        </header>
+        <!-- grid skills -->
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+          <!-- cards -->
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/htmlLogo.webp"
+              alt="typescriptLogo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">HTML</p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/cssLogo.webp"
+              alt="Css logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">CSS</p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/csharpLogo.webp"
+              alt="Csharp logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">C#</p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/pythonLogo.webp"
+              alt="Python logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">Python</p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/typescriptLogo.webp"
+              alt="Typescript logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">
+              TypeScript
+            </p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/sqlServerLogo.webp"
+              alt="SQL Server logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">
+              SQL Server
+            </p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/mySqlLogo.webp"
+              alt="My SQL logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">My SQL</p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/nodeJsLogo.webp"
+              alt="Node js logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">NodeJS</p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/ReactLogo.webp"
+              alt="React logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">React</p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/reduxLogo.webp"
+              alt="Redux logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">Redux</p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/gitLogo.webp"
+              alt="Git logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">Git</p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/awsLambdaLogo.webp"
+              alt="AWS Lambda logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">
+              AWS Lambda
+            </p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/awsDynamoDbLogo.webp"
+              alt="AWS Dynamo DB logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">
+              AWS Dynamo DB
+            </p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/fastapiLogo.svg"
+              alt="Fastapi logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">FastAPI</p>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 shadow-md rounded-lg flex flex-col items-center p-4 transition-transform transform hover:scale-105"
+          >
+            <img
+              src="assets/habilidades/tailwindCssLogo.svg"
+              alt="Tailwind CSS logo"
+              class="w-12 h-12 mb-2"
+            />
+            <p class="text-center text-gray-900 dark:text-gray-200">
+              Tailwind CSS
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- proyectos -->
+    <section
+      id="portfolio"
+      class="section lg:h-[100vh] flex items-center lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden"
+    >
+      <div class="container mx-auto">
+        <header class="text-center mb-12">
+          <h2 class="text-4xl section-title-portfolio relative mb-3">
+            Portfolio
+          </h2>
+          <p class="subtitle max-w-xl mx-auto">
+            Me gusta aprender nuevas cosas y siempre estoy buscando crear nuevos
+            proyectos para trabajar. Así que aquí te muestro mis ultimos
+            proyectos.
+          </p>
+        </header>
+
+        <!-- proyectos -->
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <article
+            class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col"
+          >
+            <img
+              src="assets/proyecto1.png"
+              alt="Captura del sistema inmobiliario en C++"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-6 flex flex-col flex-1">
+              <h3
+                class="text-xl font-semibold mb-2 text-gray-900 dark:text-white"
+              >
+                ABML Inmobiliaria
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4 flex-1">
+                Sistema de consola en C++ para gestión de propiedades: altas,
+                bajas, modificaciones y listados.
+              </p>
+              <a
+                href="https://github.com/tuusuario/abml_inmobiliaria"
+                target="_blank"
+                class="btn btn-md bg-red-700 hover:bg-red-900 text-white text-center rounded"
+              >
+                Ver en GitHub
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col"
+          >
+            <img
+              src="https://via.placeholder.com/600x400?text=Mini+RAG+Python"
+              alt="Placeholder del proyecto RAG en Python"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-6 flex flex-col flex-1">
+              <h3
+                class="text-xl font-semibold mb-2 text-gray-900 dark:text-white"
+              >
+                Mini RAG en Python
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-4 flex-1">
+                Prototipo de sistema de recuperación aumentada con embeddings y
+                LangChain.
+              </p>
+              <a
+                href="https://github.com/tuusuario/langchain-rag"
+                target="_blank"
+                class="btn btn-md bg-red-700 hover:bg-red-900 text-white text-center rounded"
+              >
+                Ver en GitHub
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- contacto -->
+    <section
+      id="contact"
+      class="section lg:h-[100vh] flex items-center lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden"
+    >
+      <div class="container mx-auto">
+        <header class="text-center mb-12">
+          <h2 class="text-4xl section-title-contacto relative mb-3">
+            Contacto
+          </h2>
+          <p class="subtitle max-w-xl mx-auto">
+            Si querés hablar sobre proyectos, colaborar o simplemente saludar,
+            podés escribirme a través del formulario o por mis redes.
+          </p>
+        </header>
+
+        <div class="flex flex-col lg:flex-row lg:gap-x-8">
+          <!-- Información de contacto -->
+          <div
+            class="flex flex-1 flex-row flex-wrap gap-8 lg:flex-col items-start space-y-8 mb-12 lg:mb-0 lg:pt-2 text-gray-700 dark:text-gray-300"
+          >
+            <!-- Card de contacto 1 -->
+            <div class="flex flex-col lg:flex-row gap-x-4">
+              <div
+                class="text-red-700 dark:text-red-500 rounded-sm w-14 h-14 flex items-center justify-center mt-2 mb-4 lg:mb-0 text-2xl"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <h4
+                  class="text-xl font-semibold mb-1 text-gray-900 dark:text-white"
+                >
+                  Email
+                </h4>
+                <p class="mb-1">kimberly.blandong.gonzalez@gmail.com</p>
+                <p class="text-red-700 dark:text-red-500">
+                  Envíame un mensaje directamente
+                </p>
+              </div>
+            </div>
+
+            <!-- Card de contacto 2 -->
+            <div class="flex flex-col lg:flex-row gap-x-4">
+              <div
+                class="dark:text-white rounded-sm w-14 h-14 flex items-center justify-center mt-2 mb-4 lg:mb-0 text-2xl"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </div>
+              <div>
+                <h4
+                  class="text-xl font-semibold mb-1 text-gray-900 dark:text-white"
+                >
+                  LinkedIn
+                </h4>
+                <a
+                  href="https://www.linkedin.com/in/kimberly-blandon/"
+                  target="_blank"
+                  class="text-red-700 dark:text-red-500"
+                >
+                  Conectemos profesionalmente
+                </a>
+              </div>
+            </div>
+
+            <!-- Card de contacto 3 -->
+            <div class="flex flex-col lg:flex-row gap-x-4">
+              <div
+                class="dark:text-white rounded-sm w-14 h-14 flex items-center justify-center mt-2 mb-4 lg:mb-0 text-2xl"
+              >
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div>
+                <h4
+                  class="text-xl font-semibold mb-1 text-gray-900 dark:text-white"
+                >
+                  GitHub
+                </h4>
+                <a
+                  href="https://github.com/Kimblag"
+                  target="_blank"
+                  class="text-red-700 dark:text-red-500"
+                  >Mirá mis proyectos</a
+                >
+              </div>
+            </div>
+            <!-- Card de contacto 3 -->
+            <div class="flex flex-col lg:flex-row gap-x-4">
+              <div
+                class="dark:text-white rounded-sm w-14 h-14 flex items-center justify-center mt-2 mb-4 lg:mb-0 text-2xl"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="flex items-center">
+                <h4
+                  class="text-base font-semibold mb-1 text-gray-900 dark:text-white"
+                >
+                  Ciudad Autónoma de Buenos Aires, Argentina
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulario -->
+          <form
+            action="https://formsubmit.co/kimberly.blandon.gonzalez@gmail.com"
+            method="POST"
+            class="space-y-6 w-full max-w-[780px] bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col"
+          >
+            <input type="text" name="_honey" style="display: none" />
+            <div class="flex flex-col md:flex-row gap-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Tu nombre"
+                class="input p-3 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white flex-1"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Tu email"
+                class="input p-3 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white flex-1"
+                required
+              />
+            </div>
+
+            <input
+              type="text"
+              name="subject"
+              placeholder="Asunto"
+              class="input p-3 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white w-full"
+              required
+            />
+
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Tu mensaje"
+              class="textarea p-3 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white w-full"
+              required
+            ></textarea>
+
+            <button
+              type="submit"
+              class="btn btn-lg bg-red-700 hover:bg-red-900 text-white rounded"
+            >
+              Enviar mensaje
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="py-12">
+      <div class="container mx-auto">
+        <div
+          class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 items-center justify-between"
+        >
+          <div class="flex space-x-6 items-center justify-center">
+            <a
+              href="https://www.linkedin.com/in/kimberly-blandon/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin text-2xl"></i>
+            </a>
+            <a href="https://github.com/Kimblag" target="_blank">
+              <i class="fa-brands fa-github text-2xl"></i>
+            </a>
+          </div>
+          <div>
+            <p>Kimberly Blandon</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      id="btn-top"
+      class="bg-[#912f40] bg-[#702632] text-white w-12 h-12 rounded-full fixed right-24 bottom-24 cursor-pointer flex justify-center items-center transition-all"
+    >
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
